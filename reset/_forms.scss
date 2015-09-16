@@ -1,0 +1,108 @@
+fieldset {
+  background-color: $secondary-background-color;
+  border: $base-border;
+  margin: 0 0 $half-spacing-unit;
+  padding: $base-spacing-unit;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: $half-spacing-unit / 2;
+
+  &.required::after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select[multiple=multiple] {
+  background-color: $base-background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: inset 0 1px 3px rgba($black, 0.06);
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  margin-bottom: $half-spacing-unit;
+  padding: $base-spacing-unit / 3;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: inset 0 1px 3px rgba($black, 0.06), 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $half-spacing-unit / 2;
+
+  + label {
+    display: inline-block;
+  }
+}
+
+input[type="file"] {
+  margin-bottom: $half-spacing-unit;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  margin-bottom: $base-spacing-unit;
+  max-width: 100%;
+  width: auto;
+}
