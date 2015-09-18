@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $FLAG
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+    <div class="flag">
+        <div class="flag__image">
+            <img src="" alt="">
+        </div>
+        <div class="flag__body">
+            <p></p>
+        </div>
+    </div>
+ *
+ */
+.flag {
+    display: table;
+    width: 100%;
+    margin-bottom: $base-spacing-unit;
+}
+
+    .flag__img,
+    .flag__body {
+        display: table-cell;
+        vertical-align: middle;
+
+        .flag--top & {
+            vertical-align: top;
+        }
+
+        .flag--bottom & {
+            vertical-align: bottom;
+        }
+
+    }
+
+    .flag__img {
+        padding-right: $base-spacing-unit;
+
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+        .flag--rev & {
+            padding-right: 0;
+            padding-left: $base-spacing-unit;
+        }
+
+    }
+
+    .flag__body {
+        width: 100%;
+    }
+
+    /**
+     * `.img`s in `.islet`s need an appropriately sized margin.
+     */
+    .islet {
+        .flag {
+            margin-bottom: $half-spacing-unit;
+        }
+        .flag__img {
+            margin-right:$half-spacing-unit;
+        }
+        .flag__img--rev {
+            margin-left:$half-spacing-unit;
+        }
+    }

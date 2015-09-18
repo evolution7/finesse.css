@@ -1,0 +1,13 @@
+///
+/// Define your breakpoints. The first value is the prefix that shall be used for
+/// your classes (e.g. `.palm--one-half`), the second value is the media query
+/// that the breakpoint fires at.
+///
+$breakpoints: (
+    "palm" "(max-width: 480px)",
+    "lap" "(min-width: 481px) and (max-width: 1023px)",
+    "portable" "(max-width: 1023px)",
+    "lap-and-up" "(min-width: 481px)",
+    "desk" "(min-width: 1024px)",
+    "desk-wide" "(min-width: 1200px)"
+) !default;

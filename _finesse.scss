@@ -9,14 +9,89 @@
 /// as a base for Finesse together with an adaptation of csswizardry-grids
 /// (http://csswizardry.com/csswizardry-grids/) for the grid system.
 ///
+/// Also to Bourbon.io (http://bourbon.io/) for a slightly modified version of
+/// their Bitters scaffold styles (http://bitters.bourbon.io/).
 ///
 
-// Variable imports
-@import "reset/variables";
+///
+/// Variables
+/// These files are where the default values for the available variables are
+/// housed.
+///
+/// Breakpoints.scss has the most common breakpoint values to be used in our
+/// media queries and grid system.
+///
+/// Colours.scss contain a handfull of default colours used to decorate our base
+/// components and objects.
+///
+/// Defaults.scss contains the default type and border properties (colours,
+/// sizing, font) and well as the default spacing measurement that is used for
+/// the grid gutters and components default padding/margins.
+///
+@import "variables/breakpoints";
+@import "variables/colours";
+@import "variables/defaults";
 
-// Reset imports
-@import "reset/buttons";
-@import "reset/forms";
-@import "reset/lists";
-@import "reset/tables";
-@import "reset/typography";
+///
+/// Setup
+/// Our default styling of the most commonly used HTML tags. Normalize.css is
+/// included as a starting point and a modified version of Bourbon Bitters is
+/// included to add some slightly opinionated base styles which our designs
+/// should be aware of.
+///
+/// As with the entire framework, any default styling that is continually
+/// overwritten should be re-evaluated.
+///
+@import "setup/normalize";
+@import "setup/buttons";
+@import "setup/forms";
+@import "setup/lists";
+@import "setup/tables";
+@import "setup/typography";
+
+///
+/// Helpers
+/// Various helper classes and mixins used to increase code reusability and
+/// prevent the creation of custom classes for the purpose of very basic element
+/// manipulations (eg. margin/padding).
+///
+@import "helpers/arrow";
+@import "helpers/clearfix";
+@import "helpers/columns";
+@import "helpers/headings";
+@import "helpers/modifiers";
+
+///
+/// Grid
+/// Imports to create grid system classes and mixins using the breakpoints set
+/// in variables/breakpoints.scss as well as modifier classes used to
+/// maniplulate a grid's layout.
+///
+@import "grid/media-query";
+@import "grid/modifiers";
+@import "grid/widths";
+
+///
+/// Abstractions
+/// Common patterns for the creation of more complex components. Abstractions
+/// will rarely me be used without modification and are most commonly included
+/// via the `@extend` directive.
+///
+@import "abstractions/block-list";
+@import "abstractions/flag";
+@import "abstractions/island";
+@import "abstractions/media";
+@import "abstractions/nav";
+@import "abstractions/split";
+
+///
+/// Components
+/// More complete design patterns that can potentially used without modification
+/// for 'quick wins'. Some components provide a modifer class `--finesse` which
+/// will provide a more opinionated design layer on top of the base component.
+///
+@import "components/breadcrumbs";
+@import "components/lozenge";
+@import "components/pagination";
+@import "components/prototype";
+@import "components/stats";

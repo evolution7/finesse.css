@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    $PROTOTYPE
+\*------------------------------------*/
+/**
+ * Quickly throw together prototype wireframes. Use in conjunction with other
+ * inuit.css objects to create simple prototypes, e.g.:
+ *
+   <div class="island  prototype  prototype--medium">Header</div>
+
+   <ul class="nav  nav--fit  nav--block  prototype">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * The beauty of combining the prototyping with inuit.css objects is that any
+ * prototyping can quickly be converted into/used as production code.
+ *
+ * For a more complete prototyping framework, consider Adam Whitcroft’s Proto:
+ * adamwhitcroft.com/proto
+ *
+ * Demo: jsfiddle.net/inuitcss/qCXfh/
+ *
+ */
+.prototype {
+    line-height: $base-spacing-unit;
+    text-align: center;
+    background-color: #999;
+    color: #fff;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+
+/**
+ * All prototypes will occupy 100% of their parent’s width, but to alter their
+ * heights we apply incrementally larger line-heights:
+ */
+.prototype--small { line-height: 2 * $base-line-height; }
+.prototype--medium { line-height: 4 * $base-line-height; }
+.prototype--large { line-height: 8 * $base-line-height; }
+.prototype--huge { line-height: 16 * $base-line-height; }
+.prototype--gigantic { line-height: 32 * $base-line-height; }

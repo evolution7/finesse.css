@@ -37,12 +37,12 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color $base-duration $base-timing;
+  transition: color 150ms ease;
 
   &:active,
   &:focus,
   &:hover {
-    text-decoration: underline;
+    color: darken($action-color, 10%);
   }
 }
 

@@ -5,7 +5,7 @@ input[type="reset"] {
   background-color: $action-color;
   border: 0;
   border-radius: $base-border-radius;
-  color: $white;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -15,14 +15,14 @@ input[type="reset"] {
   line-height: 1;
   padding: $half-spacing-unit $base-spacing-unit;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
+  transition: background-color 150ms ease;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: darken($action-color, 10%);
     color: #fff;
   }
 

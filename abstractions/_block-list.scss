@@ -1,0 +1,30 @@
+///
+/// @name Block List
+/// @group abstractions
+/// @description
+///     A padded list that can contain a full-width link or any inline elements.
+///
+/// @example
+///     <ul class="block-list">
+///         <li>Foo</li>
+///         <li>Foo <a href="#">Bar</a> Baz</li>
+///         <li>Baz</li>
+///         <li><a href="#" class="block-list__link">Foo Bar Baz</a></li>
+///     </ul>
+///
+
+.block-list {
+    margin-left: 0;
+    border-top: $base-border;
+    list-style: none;
+
+    > li {
+        padding: $half-spacing-unit;
+        border-bottom: $base-border;
+    }
+}
+    .block-list__link {
+        display: block;
+        padding: $half-spacing-unit;
+        margin: -$half-spacing-unit;
+    }
