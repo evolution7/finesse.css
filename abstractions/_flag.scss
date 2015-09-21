@@ -1,21 +1,21 @@
-/*------------------------------------*\
-    $FLAG
-\*------------------------------------*/
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- * E.g.:
- *
-    <div class="flag">
-        <div class="flag__image">
-            <img src="" alt="">
-        </div>
-        <div class="flag__body">
-            <p></p>
-        </div>
-    </div>
- *
- */
+///
+/// @name Flag
+/// @group abstractions
+/// @description
+///     A version of the media object that vertically aligns the text
+///     with modifier classes to change the alignment.
+///
+/// @example
+///     <div class="flag [flag--top flag--bottom flag--rev]">
+///         <div class="flag__img">
+///             <img src="" alt="">
+///         </div>
+///         <div class="flag__body">
+///             <p></p>
+///         </div>
+///     </div>
+///
+
 .flag {
     display: table;
     width: 100%;
@@ -56,17 +56,18 @@
         width: 100%;
     }
 
-    /**
-     * `.img`s in `.islet`s need an appropriately sized margin.
-     */
+    ///
+    /// Use $half-spacing-unit inside .islet
+    ///
+
     .islet {
         .flag {
             margin-bottom: $half-spacing-unit;
         }
         .flag__img {
-            margin-right:$half-spacing-unit;
+            padding-right: $half-spacing-unit;
         }
         .flag__img--rev {
-            margin-left:$half-spacing-unit;
+            padding-left: $half-spacing-unit;
         }
     }

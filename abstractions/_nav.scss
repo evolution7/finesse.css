@@ -1,150 +1,100 @@
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- * e.g.:
- *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Demo: jsfiddle.net/inuitcss/Vnph4
- *
- */
-.nav{
-    list-style:none;
-    margin-left:0;
-    @extend .cf;
+///
+/// @name Nav
+/// @group abstractions
+/// @description
+///     Basic navigation abstraction with minor layout modifiers.
+///
+/// @example
+///     <ul class="nav [nav--stacked nav--banner nav--block nav--fit nav--keywords]">
+///         <li><a href="#">Home</a></li>
+///         <li><a href="#">About</a></li>
+///         <li><a href="#">Portfolio</a></li>
+///         <li><a href="#">Contact</a></li>
+///     </ul>
+///
 
-    > li{
+.nav {
+    @extend .cf;
+    list-style: none;
+    margin-left: 0;
+
+    > li {
 
         &,
-        > a{
-            display:inline-block;
-           *display:inline;
-            zoom:1;
+        > a {
+            display: inline-block;
         }
     }
 }
 
+///
+/// .nav--stacked throws the list into vertical mode.
+///
 
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-   <ul class="nav  nav--stacked">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav--stacked{
+.nav--stacked {
 
-    > li{
-        display:list-item;
+    > li {
+        display: list-item;
 
-        > a{
-            display:block;
+        > a {
+            display: block;
         }
     }
 }
 
+///
+/// .nav--banner centres the list.
+///
 
-/**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
- *
-   <ul class="nav  nav--banner">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav--banner{
-    text-align:center;
+.nav--banner {
+    text-align: center;
 }
 
+///
+/// .nav--block gives nav links a big, blocky hit area.
+///
 
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
-   <ul class="nav  nav--block">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav--block{
-    line-height:1;
-    /**
-     * Remove whitespace caused by `inline-block`.
-     */
-    letter-spacing:-0.31em;
-    word-spacing:-0.43em;
-    white-space:nowrap;
+.nav--block {
+    line-height: 1;
 
-    > li{
-        letter-spacing:normal;
-        word-spacing:normal;
+    > li {
 
-        > a{
-            padding:$half-spacing-unit;
+        > a {
+            padding: $half-spacing-unit;
         }
     }
 }
 
+///
+/// .nav--fit forces a nav to occupy 100% of the available width of its parent.
+///
 
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
-   <ul class="nav  nav--fit">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Thanks to @pimpl for this idea!
- */
-.nav--fit{
-    display:table;
-    width:100%;
+.nav--fit {
+    display: table;
+    width: 100%;
 
-    > li{
-        display:table-cell;
+    > li {
+        display: table-cell;
 
-        > a{
-            display:block;
+        > a {
+            display: block;
         }
     }
 }
 
+///
+/// .nav--keywords transforms the nav to a comma-delimited list.
+///
 
-/**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
-   `<ul class="nav  nav--keywords>`
- *
- */
-.nav--keywords{
+.nav--keywords {
 
-    > li{
+    > li {
 
-        &:after{
+        &:after {
             content:"\002C" "\00A0";
         }
 
-        &:last-child:after{
+        &:last-child:after {
             display:none;
         }
     }
