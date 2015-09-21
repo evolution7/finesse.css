@@ -1,25 +1,25 @@
 table {
-  border-collapse: collapse;
-  font-feature-settings: "kern", "liga", "tnum";
-  margin: $half-spacing-unit 0;
-  table-layout: fixed;
-  width: 100%;
+    width: 100%;
+    margin: $half-spacing-unit 0;
+    border-collapse: collapse;
+    font-feature-settings: "kern", "liga", "tnum";
+    table-layout: fixed;
 }
 
 th {
-  border-bottom: 1px solid shade($base-border-color, 25%);
-  font-weight: 600;
-  padding: $half-spacing-unit 0;
-  text-align: left;
+    padding: $half-spacing-unit 0;
+    border-bottom: 1px solid shade($base-border-color, 25%);
+    font-weight: 600;
+    text-align: left;
 }
 
 td {
-  border-bottom: $base-border;
-  padding: $half-spacing-unit 0;
+    padding: $half-spacing-unit 0;
+    border-bottom: $base-border;
 }
 
 tr,
 td,
 th {
-  vertical-align: middle;
+    vertical-align: middle;
 }

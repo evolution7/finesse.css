@@ -1,16 +1,14 @@
-/*------------------------------------*\
-    $HELPER
-\*------------------------------------*/
 ///
-/// A series of helper classes to use arbitrarily. Only use a helper class if an
-/// element/component doesn’t already have a class to which you could apply this
-/// styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
-/// that ruleset as opposed to adding the `.float--left` class to the markup.
+/// @name Modifiers
+/// @description
+///     A series of helper classes to use arbitrarily. Only use a helper class if an
+///     element/component doesn’t already have a class to which you could apply this
+///     styling, e.g. if you need to float '.main-nav' left then add 'float:left;' to
+///     that ruleset as opposed to adding the '.float--left' class to the markup.
 ///
-/// A lot of these classes carry `!important` as you will always want them to win
-/// out over other selectors.
+///     A lot of these classes carry '!important' as you will always want them to win
+///     out over other selectors.
 ///
-
 
 ///
 /// Add/remove floats
@@ -19,7 +17,6 @@
 .float--left    { float:left !important; }
 .float--none    { float:none !important; }
 
-
 ///
 /// Text alignment
 ///
@@ -27,14 +24,12 @@
 .text--center   { text-align:center!important; }
 .text--right    { text-align:right !important; }
 
-
 ///
 /// Font weights
 ///
 .weight--light      { font-weight:300!important; }
 .weight--normal     { font-weight:400!important; }
 .weight--semibold   { font-weight:600!important; }
-
 
 ///
 /// Add/remove margins
@@ -63,7 +58,6 @@
 .flush--ends    { margin-top:   0!important; margin-bottom:0!important; }
 .flush--sides   { margin-right: 0!important; margin-left:  0!important; }
 
-
 ///
 /// Add/remove paddings
 ///
@@ -91,34 +85,30 @@
 .hard--ends     { padding-top:   0!important; padding-bottom:0!important; }
 .hard--sides    { padding-right: 0!important; padding-left:  0!important; }
 
-
 ///
-/// Pull items full width of `.island` parents.
+/// Pull items full width of '.island' parents.
 ///
-.full-bleed{
-    margin-right:-$base-spacing-unit!important;
-    margin-left: -$base-spacing-unit!important;
+.full-bleed {
+    margin-right: -$base-spacing-unit !important;
+    margin-left: -$base-spacing-unit !important;
 
-    .islet &{
-        margin-right:-($half-spacing-unit)!important;
-        margin-left: -($half-spacing-unit)!important;
+    .islet & {
+        margin-right: -($half-spacing-unit) !important;
+        margin-left: -($half-spacing-unit) !important;
     }
 }
 
-
 ///
-/// Add a help cursor to any element that gives the user extra information on
-/// `:hover`.
+/// Add a help cursor to any element that gives the user extra information on ':hover'.
 ///
-.informative{
-    cursor:help!important;
+.informative {
+    cursor: help !important;
 }
-
 
 ///
 /// Mute an object by reducing its opacity.
 ///
-.muted{
-    opacity:0.5!important;
-    filter:alpha(opacity = 50)!important;
+.muted {
+    opacity:0.5 !important;
+    filter: alpha(opacity = 50) !important;
 }

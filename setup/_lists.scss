@@ -1,19 +1,19 @@
 ul,
 ol {
-  list-style-type: none;
-  margin: 0 0 $half-spacing-unit;
-  padding: 0;
+    list-style-type: none;
+    margin: 0 0 $half-spacing-unit;
+    padding: 0;
 }
 
 dl {
-  margin-bottom: $half-spacing-unit;
+    margin-bottom: $half-spacing-unit;
 
-  dt {
-    font-weight: bold;
-    margin-top: $half-spacing-unit;
-  }
+    dt {
+        font-weight: bold;
+        margin-top: $half-spacing-unit;
+    }
 
-  dd {
-    margin: 0;
-  }
+    dd {
+        margin: 0;
+    }
 }

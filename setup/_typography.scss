@@ -1,9 +1,9 @@
 body {
-  color: $base-font-color;
-  font-family: $base-font-family;
-  font-feature-settings: "kern", "liga", "pnum";
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-feature-settings: "kern", "liga", "pnum";
+    font-size: $base-font-size;
+    line-height: $base-line-height;
 }
 
 h1,
@@ -12,50 +12,50 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: $base-font-size;
-  line-height: $heading-line-height;
-  margin: 0 0 $half-spacing-unit;
+    font-family: $heading-font-family;
+    font-size: $base-font-size;
+    line-height: $heading-line-height;
+    margin: 0 0 $half-spacing-unit;
 }
 
 h1 {
-  font-size: 1.75em;
+    font-size: 1.75em;
 }
 
 h2 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 h3 {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 p {
-  margin: 0 0 $half-spacing-unit;
+    margin: 0 0 $half-spacing-unit;
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color 150ms ease;
+    color: $action-color;
+    text-decoration: none;
+    transition: color 150ms ease;
 
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($action-color, 10%);
-  }
+    &:active,
+    &:focus,
+    &:hover {
+        color: darken($action-color, 10%);
+    }
 }
 
 hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing-unit 0;
+    margin: $base-spacing-unit 0;
+    border-bottom: $base-border;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
 }
 
 img,
 picture {
-  margin: 0;
-  max-width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
