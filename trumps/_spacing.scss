@@ -97,18 +97,3 @@
         margin-left: -($half-spacing-unit) !important;
     }
 }
-
-///
-/// Add a help cursor to any element that gives the user extra information on ':hover'.
-///
-.informative {
-    cursor: help !important;
-}
-
-///
-/// Mute an object by reducing its opacity.
-///
-.muted {
-    opacity:0.5 !important;
-    filter: alpha(opacity = 50) !important;
-}

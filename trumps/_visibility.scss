@@ -1,0 +1,28 @@
+///
+/// @name Visibility
+/// @group trumps
+/// @description
+///     Simple helper classes for hiding and showing content based on media queries.
+///
+
+@each $breakpoint in $breakpoints {
+    .hidden--#{nth($breakpoint, 1)} {
+        @include media-query(#{nth($breakpoint, 1)}) {
+            display: none;
+        }
+    }
+
+    .show--#{nth($breakpoint, 1)} {
+        display: none;
+
+        @include media-query(#{nth($breakpoint, 1)}) {
+            display: block;
+        }
+
+        &.grid__item {
+            @include media-query(#{nth($breakpoint, 1)}) {
+                display: inline-block;
+            }
+        }
+    }
+}

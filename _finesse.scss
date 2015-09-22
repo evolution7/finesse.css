@@ -5,7 +5,7 @@
 /// of inuit.css as well as learnings from bourbon.io among other css libraries.
 ///
 /// All credit goes to Harry Roberts (http://csswizardry.com/) for the modified
-/// version of inuit.css v5 (https://github.com/csswizardry/inuit.css/)
+/// version of inuit.css v6 (https://github.com/csswizardry/inuit.css/)
 /// as a base for Finesse together with an adaptation of csswizardry-grids
 /// (http://csswizardry.com/csswizardry-grids/) for the grid system.
 ///
@@ -14,76 +14,57 @@
 ///
 
 ///
-/// Variables
-/// These files are where the default values for the available variables are
-/// housed.
+/// Settings
+/// Global variable files.
 ///
-/// Breakpoints.scss has the most common breakpoint values to be used in our
-/// media queries and grid system.
-///
-/// Colours.scss contain a handfull of default colours used to decorate our base
-/// components and objects.
-///
-/// Defaults.scss contains the default type and border properties (colours,
-/// sizing, font) and well as the default spacing measurement that is used for
-/// the grid gutters and components default padding/margins.
-///
-@import "variables/breakpoints";
-@import "variables/colours";
-@import "variables/defaults";
+@import "settings/responsive";
+@import "settings/colours";
+@import "settings/defaults";
 
 ///
-/// Setup
-/// Our default styling of the most commonly used HTML tags. Normalize.css is
-/// included as a starting point and a modified version of Bourbon Bitters is
-/// included to add some slightly opinionated base styles which our designs
+/// Tools
+/// Globally available tools and mixins.
+///
+@import "tools/arrow";
+@import "tools/headings";
+@import "tools/responsive";
+@import "tools/widths";
+
+///
+/// Generic
+/// Normalize.css and low specificty global styles.
+///
+@import "generic/normalize";
+@import "generic/box-sizing";
+
+///
+/// Base
+/// Our default styling of the most commonly used HTML tags. It uses a modified
+/// version of Bourbon Bitters to add opinionated base styles which our designs
 /// should be aware of.
 ///
 /// As with the entire framework, any default styling that is continually
 /// overwritten should be re-evaluated.
 ///
-@import "setup/normalize";
-@import "setup/buttons";
-@import "setup/forms";
-@import "setup/lists";
-@import "setup/tables";
-@import "setup/typography";
-@import "setup/box-sizing";
+@import "base/buttons";
+@import "base/forms";
+@import "base/lists";
+@import "base/tables";
+@import "base/typography";
 
 ///
-/// Helpers
-/// Various helper classes and mixins used to increase code reusability and
-/// prevent the creation of custom classes for the purpose of very basic element
-/// manipulations (eg. margin/padding).
-///
-@import "helpers/arrow";
-@import "helpers/clearfix";
-@import "helpers/columns";
-@import "helpers/headings";
-@import "helpers/modifiers";
-
-///
-/// Grid
-/// Imports to create grid system classes and mixins using the breakpoints set
-/// in variables/breakpoints.scss as well as modifier classes used to
-/// maniplulate a grid's layout.
-///
-@import "grid/media-query";
-@import "grid/modifiers";
-@import "grid/widths";
-
-///
-/// Abstractions
-/// Common patterns for the creation of more complex components. Abstractions
+/// Objects
+/// Common patterns for the creation of more complex components. Objects
 /// will rarely me be used without modification and are most commonly included
 /// via the `@extend` directive.
 ///
-@import "abstractions/block-list";
-@import "abstractions/flag";
-@import "abstractions/island";
-@import "abstractions/media";
-@import "abstractions/nav";
-@import "abstractions/split";
+@import "objects/block-list";
+@import "objects/flag";
+@import "objects/grid";
+@import "objects/island";
+@import "objects/media";
+@import "objects/nav";
+@import "objects/split";
 
 ///
 /// Components
@@ -96,3 +77,14 @@
 @import "components/pagination";
 @import "components/prototype";
 @import "components/stats";
+
+///
+/// Trumps
+/// Overrides, helpers and utilities normally used to only affect one piece of
+/// the DOM at a time. These classes may use !important.
+///
+@import "trumps/clearfix";
+@import "trumps/columns";
+@import "trumps/spacing";
+@import "trumps/visibility";
+@import "trumps/widths";
