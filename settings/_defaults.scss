@@ -1,10 +1,10 @@
 ///
 /// @name Defaults
 /// @group settings
-/// @description
-///     The default type and border properties (colours, sizing, font) and
-///     well as the default spacing measurement that is used for the grid
-///     gutters and components default padding/margins.
+///
+/// The default type and border properties (colours, sizing, font) and
+/// well as the default spacing measurement that is used for the grid
+/// gutters and components default padding/margins.
 ///
 
 ///
@@ -20,21 +20,21 @@ $heading-line-height: 1.2 !default;
 ///
 /// Default font colors
 ///
-$base-font-color: $dark-grey !default;
-$action-color: $blue !default;
+$base-font-color: palette(grey, dark) !default;
+$action-color: palette(blue) !default;
 
 ///
 /// Default border styles
 ///
 $base-border-radius: 3px !default;
-$base-border-color: $light-grey !default;
+$base-border-color: palette(grey, light) !default;
 $base-border: 1px solid $base-border-color !default;
 
 ///
 /// Base background colours
 ///
 $base-background-color: #fff !default;
-$secondary-background-color: lighten($base-border-color, 5%) !default;
+$secondary-background-color: palette(grey, light) !default;
 
 ///
 /// Base spacing units

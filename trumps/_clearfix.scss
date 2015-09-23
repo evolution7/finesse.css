@@ -7,8 +7,8 @@
 ///     over and over in your markup.
 ///
 
-.clearfix,
-%clearfix {
+.cf,
+%cf {
 
     &:after {
         content: "";
