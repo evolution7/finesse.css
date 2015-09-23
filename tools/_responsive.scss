@@ -26,22 +26,12 @@
 ///
 
 @mixin media-query($media-query) {
-    $breakpoint-found: false;
-
-    @each $breakpoint in $breakpoints {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
-
-        @if $media-query == $name and $declaration {
-            $breakpoint-found: true;
-
-            @media only screen and #{$declaration} {
-                @content;
-            }
+    $declaration: map-get($breakpoints, $media-query);
+    @if $declaration {
+        @media only screen and #{$declaration} {
+            @content;
         }
-    }
-
-    @if not($breakpoint-found) {
+    } @else {
         @warn "Breakpoint '#{$media-query}' does not exist";
     }
 }

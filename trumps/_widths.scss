@@ -6,8 +6,9 @@
 ///
 /// Our responsive classes.
 ///
-@each $breakpoint in $breakpoints {
-    @include media-query(nth($breakpoint, 1)) {
-       @include device-type('#{nth($breakpoint, 1)}-');
+
+@each $key, $value in $breakpoints {
+    @include media-query($key) {
+       @include device-type('#{$key}-');
     }
 }

@@ -5,22 +5,22 @@
 ///     Simple helper classes for hiding and showing content based on media queries.
 ///
 
-@each $breakpoint in $breakpoints {
-    .hidden--#{nth($breakpoint, 1)} {
-        @include media-query(#{nth($breakpoint, 1)}) {
+@each $key, $value in $breakpoints {
+    .hidden--#{$key} {
+        @include media-query(#{$key}) {
             display: none;
         }
     }
 
-    .show--#{nth($breakpoint, 1)} {
+    .show--#{$key} {
         display: none;
 
-        @include media-query(#{nth($breakpoint, 1)}) {
+        @include media-query(#{$key}) {
             display: block;
         }
 
         &.grid__item {
-            @include media-query(#{nth($breakpoint, 1)}) {
+            @include media-query(#{$key}) {
                 display: inline-block;
             }
         }
