@@ -5,8 +5,8 @@
 ///     Basic navigation abstraction with minor layout modifiers.
 ///
 /// @example
-///     <ul class="nav [nav--stacked nav--banner nav--block nav--fit nav--keywords]">
-///         <li><a href="#">Home</a></li>
+///     <ul class="nav [nav--stacked nav--banner nav--block nav--fit nav--separator]">
+///         <li data-separator="|"><a href="#">Home</a></li>
 ///         <li><a href="#">About</a></li>
 ///         <li><a href="#">Portfolio</a></li>
 ///         <li><a href="#">Contact</a></li>
@@ -86,16 +86,9 @@
 /// .nav--keywords transforms the nav to a comma-delimited list.
 ///
 
-.nav--keywords {
+.nav--separator {
 
-    > li {
-
-        &:after {
-            content:"\002C" "\00A0";
-        }
-
-        &:last-child:after {
-            display:none;
-        }
+    > li + li[data-separator]:before{
+        content:"\00A0" attr(data-separator) "\00A0";
     }
 }
