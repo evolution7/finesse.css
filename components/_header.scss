@@ -1,0 +1,94 @@
+.header-finesse {
+    @extend .cf;
+    position: relative;
+    background-color: $secondary-background-color;
+}
+    .header__overlay {
+        opacity: 0;
+        position: fixed;
+        // z-index: -1;
+        transition: opacity 0.4s ease 0s;
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(#000, 0.5);
+
+        .mobile-nav-active & {
+            opacity: 0;
+        }
+    }
+
+
+    .header__bar {
+        @extend .cf;
+        position: relative;
+        padding: $half-spacing-unit 0;
+        background-color: inherit;
+        z-index: 2;
+
+        @include media-query(desk) {
+            float: left;
+        }
+    }
+
+        .header__logo {
+            display: block;
+            float: left;
+            height: 50px;
+
+            @include media-query(desk-wide) {
+                height: 80px;
+            }
+        }
+
+        .header__toggle {
+            float: right;
+        }
+
+    .header__nav {
+        margin: 0;
+
+        @include media-query(portable) {
+            position: absolute;
+            top: 100%;
+            z-index: 1;
+            width: 100%;
+            clear: both;
+            background-color: $secondary-background-color;
+            transform: translateY(-100%);
+            transition: transform .2s cubic-bezier(0.215,0.61,0.355,1);
+        }
+
+        @include media-query(desk) {
+            float: right;
+        }
+
+        .mobile-nav-active & {
+            transform: translateY(0);
+        }
+
+        li {
+            @include media-query(desk) {
+                display: inline-block;
+                line-height: 50px;
+            }
+
+            @include media-query(desk-wide) {
+                line-height: 80px;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 0.75em;
+
+            &:hover {
+                color: darken($action-color, 10%);
+            }
+
+            &.current {
+                background-color: $action-color;
+                color: #fff;
+                font-weight: normal;
+            }
+        }
+    }

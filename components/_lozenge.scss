@@ -25,8 +25,8 @@ $line-height-ratio: $base-line-height / $base-font-size;
     padding-right:($line-height-ratio * 0.166667) * 1em;
     padding-left: ($line-height-ratio * 0.166667) * 1em;
               /* =1.50em */
-    text-align:center;
-    background-color:$base-background-color;
-    color:#fff; /* Override this color in your theme stylesheet */
-    border-radius:$base-border-radius;
+    text-align: center;
+    background-color: $action-color;
+    color: #fff;
+    border-radius: $base-border-radius;
 }

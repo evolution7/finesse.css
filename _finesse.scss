@@ -76,6 +76,8 @@
 @import "components/pagination";
 @import "components/prototype";
 @import "components/stats";
+@import "components/header";
+@import "components/footer";
 
 ///
 /// Trumps
@@ -83,6 +85,7 @@
 /// the DOM at a time. These classes may use !important.
 ///
 @import "trumps/clearfix";
+@import "trumps/colours";
 @import "trumps/columns";
 @import "trumps/spacing";
 @import "trumps/visibility";

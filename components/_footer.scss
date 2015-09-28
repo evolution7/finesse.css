@@ -1,0 +1,17 @@
+.footer-finesse {
+    @extend .cf;
+    padding: $half-spacing-unit 0;
+    background: $secondary-background-color;
+
+    @include media-query(desk) {
+        padding: $base-spacing-unit 0;
+    }
+}
+
+    .footer__navigation {
+        margin-bottom: 1.5em;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    }

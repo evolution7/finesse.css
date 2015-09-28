@@ -18,9 +18,9 @@
 
 $breakpoints: (
     palm: '(max-width: 480px)',
-    lap: '(min-width: 481px) and (max-width: 1023px)',
-    portable: '(max-width: 1023px)',
+    lap: '(min-width: 481px) and (max-width: 767px)',
+    portable: '(max-width: 767px)',
     lap-and-up: '(min-width: 481px)',
-    desk: '(min-width: 1024px)',
+    desk: '(min-width: 768px)',
     desk-wide: '(min-width: 1200px)'
 ) !default;

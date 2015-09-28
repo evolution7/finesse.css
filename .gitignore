@@ -1,2 +1,4 @@
 .DS_Store
 sassdoc/
+bower_components/
+node_modules/

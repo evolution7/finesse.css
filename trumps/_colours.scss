@@ -1,0 +1,21 @@
+@each $palette, $tones in $palettes-merged {
+    @each $key, $value in $tones {
+        @if $key == 'base' {
+            .bg--#{$palette} {
+                background: $value;
+            }
+
+            .text--#{$palette} {
+                color: $value;
+            }
+        }
+
+        .bg--#{$palette}-#{$key} {
+            background: $value;
+        }
+
+        .text--#{$palette}-#{$key} {
+            color: $value;
+        }
+    }
+}
