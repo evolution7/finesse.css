@@ -12,6 +12,10 @@
         min-height: 100%;
         background-color: rgba(#000, 0.5);
 
+        @include media-query(desk) {
+            display: none;
+        }
+
         .mobile-nav-active & {
             opacity: 1;
             z-index: 1;
@@ -43,6 +47,10 @@
 
         .header__toggle {
             float: right;
+
+            @include media-query(desk) {
+                display: none;
+            }
         }
 
     .header__nav {
