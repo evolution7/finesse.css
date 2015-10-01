@@ -20,21 +20,21 @@ $heading-line-height: 1.2 !default;
 ///
 /// Default font colors
 ///
-$base-font-color: palette(grey, dark) !default;
-$action-color: palette(blue) !default;
+$base-font-color: getColour(grey, dark) !default;
+$action-color: getColour(blue) !default;
 
 ///
 /// Default border styles
 ///
 $base-border-radius: 3px !default;
-$base-border-color: palette(grey, light) !default;
+$base-border-color: getColour(grey, light) !default;
 $base-border: 1px solid $base-border-color !default;
 
 ///
 /// Base background colours
 ///
 $base-background-color: #fff !default;
-$secondary-background-color: palette(grey, light) !default;
+$secondary-background-color: getColour(grey, light) !default;
 
 ///
 /// Base spacing units
