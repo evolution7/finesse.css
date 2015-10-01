@@ -10,10 +10,16 @@
             }
         }
 
+        ///
+        /// Background colour helper class
+        ///
         .bg--#{$palette}-#{$key} {
             background: $value;
         }
 
+        ///
+        /// Text colour helper class
+        ///
         .text--#{$palette}-#{$key} {
             color: $value;
         }

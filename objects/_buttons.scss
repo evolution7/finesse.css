@@ -1,0 +1,38 @@
+///
+/// @name Buttons
+/// @group objects
+/// @see {mixin} buttons
+/// @description
+///     Creates modifier classes to manipulate the base button styles.
+///     Options are:
+///         btn--large - a bigger button...
+///         btn--full - stretches to full with a parent
+///         btn--hollow - transparent button with colour used as border and text colour
+///         btn--plain - basically a hollow without the border
+///
+/// @example
+///     <button class"btn--blue btn--hollow">Button text</button>
+///
+
+@each $palette, $tones in $palettes-merged {
+    @each $key, $value in $tones {
+        @if $key == 'base' {
+            .btn--#{$palette} {
+                @include buttons($value);
+            }
+        }
+
+        .btn--#{$palette}-#{$key} {
+            @include buttons($value);
+        }
+    }
+}
+
+.btn--large {
+    font-size: $base-font-size * 1.5;
+}
+
+.btn--full {
+    display: block;
+    width: 100%;
+}

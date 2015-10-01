@@ -1,0 +1,44 @@
+///
+/// @name Buttons
+/// @group grid
+/// @description
+///     Creates modified versions of the button object classes using the applications colour palette.
+///     We only need to modify the button modifiers that actually use the colours.
+///
+/// @example
+///     <button class"btn--blue btn--hollow">Button text</button>
+///
+
+@mixin buttons($colour) {
+    & {
+        background: $colour;
+
+        &:hover,
+        &:focus {
+            background-color: darken($colour, 10%);
+        }
+    }
+
+    &.btn--hollow {
+        color: $colour;
+        background: transparent;
+        border: 1px solid currentColor;
+
+        &:hover,
+        &:focus {
+            background-color: $colour;
+            color: #fff;
+        }
+    }
+
+    &.btn--plain {
+        background: transparent;
+        color: $colour;
+
+        &:hover,
+        &:focus {
+            background: $colour;
+            color: #fff;
+        }
+    }
+}
