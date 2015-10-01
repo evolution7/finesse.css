@@ -1,13 +1,28 @@
+////
+/// <div class="header__overlay"></div>
+/// <div class="header-finesse">
+///     <div class="header__bar">
+///         <a href="#"><img class="header__logo" src="http://placehold.it/300x80" alt=""></a>
+///         <button class="header__toggle js-mobile-nav">Nav</button>
+///     </div>
+///
+///     <ul class="header__nav">
+///         <li><a href="#">Nav item</a></li>
+///         <li><a class="current" href="#">Nav item</a></li>
+///         <li><a href="#">Nav item</a></li>
+///     </ul>
+/// </div>
+////
+
 .header-finesse {
     @extend .cf;
     position: relative;
     background-color: $secondary-background-color;
 }
     .header__overlay {
-        opacity: 0;
         position: fixed;
+        opacity: 0;
         z-index: -1;
-        transition: opacity 0.4s ease 0s;
         width: 100%;
         min-height: 100%;
         background-color: rgba(#000, 0.5);

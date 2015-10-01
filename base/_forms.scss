@@ -1,3 +1,11 @@
+///
+/// Quite an opinionated base for forms in an attempt to combat the excessive
+/// amount of time it take to style and layout forms. This file should be
+/// constantly discussed with the design team to hold them to a more consistent
+/// approach to form design as well as ensure the base styles are helping and
+/// not a hindrance.
+///
+
 fieldset {
     background-color: $secondary-background-color;
     border: $base-border;
