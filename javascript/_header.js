@@ -1,14 +1,40 @@
+"use strict";
+
 var $ = require('jquery');
 
-var $body = $('body');
-var $toggle = $('.js-mobile-nav');
-var $overlay = $('.header__overlay');
+class Header {
 
-$toggle.on('click', function(){
-    $body.toggleClass('mobile-nav-active');
-    $overlay.on('click', function(){
-        $body.removeClass('mobile-nav-active');
-        $(this).off('click');
-    });
-});
+    constructor() {
+        this.bodyTag = $('body');
+        this.bodyClass = 'mobile-nav-active';
+        this.toggleElement = $('.js-mobile-nav');
+        this.pageOverlay = $('.header__overlay');
+        this.isNavOpen = false;
 
+        this.events();
+    }
+
+    events() {
+        let that = this;
+        this.toggleElement.on('click', function() {
+            that.isNavOpen ? that.close() : that.open();
+        });
+
+        this.pageOverlay.on('click', function() {
+            that.close();
+        });
+    }
+
+    open() {
+        this.bodyTag.addClass(this.bodyClass);
+        this.isNavOpen = true;
+    }
+
+    close() {
+        this.bodyTag.removeClass(this.bodyClass);
+        this.isNavOpen = false;
+    }
+
+}
+
+new Header;
