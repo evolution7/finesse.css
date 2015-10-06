@@ -59,6 +59,7 @@
 /// will rarely me be used without modification and are most commonly included
 /// via the `@extend` directive.
 ///
+@import "objects/alerts";
 @import "objects/block-list";
 @import "objects/flag";
 @import "objects/grid";

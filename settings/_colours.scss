@@ -34,13 +34,22 @@ $palettes: () !default;
 ///
 $palettes-default: (
     grey: (
-        base: #999,
-        light: #EEE,
-        dark: #333
+        base: #999999,
+        light: #EEEEEE,
+        dark: #333333
     ),
     blue: (
-        base: #477dca
+        base: #477DCA
     ),
+    green: (
+        base: #5CB85A
+    ),
+    yellow: (
+        base: #F0AD4E
+    ),
+    red: (
+        base: #D9534F
+    )
 );
 
 

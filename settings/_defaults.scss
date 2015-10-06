@@ -37,6 +37,14 @@ $base-background-color: #fff !default;
 $secondary-background-color: getColour(grey, light) !default;
 
 ///
+/// Base notification colours
+///
+$info-color: getColour(blue) !default;
+$success-color: getColour(green) !default;
+$warning-color: getColour(yellow) !default;
+$danger-color: getColour(red) !default;
+
+///
 /// Base spacing units
 ///
 $base-spacing-unit: $base-line-height * 1em !default;

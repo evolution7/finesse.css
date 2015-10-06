@@ -1,0 +1,43 @@
+.alert {
+    position: relative;
+    padding: $half-spacing-unit;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ffffff;
+
+    p {
+        margin: 0;
+        padding-right: 40px;
+    }
+}
+
+    .alert__close {
+        position: absolute;
+        top: 0;
+        right: $half-spacing-unit;
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+.alert--info {
+    background-color: $info-color;
+}
+
+.alert--success {
+    background-color: $success-color;
+}
+
+.alert--warning {
+    background-color: $warning-color;
+}
+
+.alert--danger {
+    background-color: $danger-color;
+}
+
+.alert--fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
