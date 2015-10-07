@@ -1,0 +1,30 @@
+///
+/// @name colour-it
+/// @group tools
+/// @description
+///     Mixin that will take the parent selector and create modifier classes
+///     for each colour in your application's palette. In this version
+///     of the mixin the modifier will only change the background colour but if
+///     we can enhance it to pass in other properties this could be very handy.
+///
+/// @example
+///     .object {
+///         @include colour-it;
+///     }
+///
+
+@mixin colour-it() {
+    @each $palette, $tones in $palettes-merged {
+        @each $key, $value in $tones {
+            @if $key == 'base' {
+                &--#{$palette} {
+                    background-color: $value;
+                }
+            }
+
+            &--#{$palette}-#{$key} {
+                background-color: $value;
+            }
+        }
+    }
+}

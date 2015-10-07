@@ -59,6 +59,7 @@ $palettes-default: (
 /// Why two arrays you ask? It allows the default colours provided by finesse to be *optionally*
 /// overwritten. Using one array would result in having to respecify the defaults if any new
 /// colours were to be added for the application.
+///
 /// @name       palettes-merged
 /// @access     private
 /// @require    {variable} palettes-default
