@@ -8,6 +8,13 @@ table {
     border-collapse: collapse;
     font-feature-settings: "kern", "liga", "tnum";
     table-layout: fixed;
+
+    /// Saw this in an example styleguide and though it was pretty cool.
+    /// Not a BEM class to make it easier to add to WYSIWYGs.
+    .note {
+        background: #fffee6;
+        color: #877a57;
+    }
 }
 
 th {

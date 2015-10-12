@@ -5,11 +5,11 @@
     line-height: 1.4;
     color: #ffffff;
 
-    p {
+}
+    .alert__text {
         margin: 0;
         padding-right: 40px;
     }
-}
 
     .alert__close {
         position: absolute;
@@ -40,4 +40,5 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }

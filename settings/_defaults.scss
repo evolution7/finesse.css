@@ -14,35 +14,35 @@ $base-font-size: 16px !default;
 $base-font-family: Helvetica, sans-serif !default;
 $base-line-height: 1.5 !default;
 
-$heading-font-family: $base-font-family !default;
+$heading-font-family: Georgia, serif !default;
 $heading-line-height: 1.2 !default;
 
 ///
 /// Default font colors
 ///
-$base-font-color: getColour(grey, dark) !default;
-$action-color: getColour(blue) !default;
+$base-font-color: getColour('grey', 'dark') !default;
+$action-color: getColour('blue') !default;
 
 ///
 /// Default border styles
 ///
 $base-border-radius: 3px !default;
-$base-border-color: getColour(grey, light) !default;
+$base-border-color: getColour('grey', 'light') !default;
 $base-border: 1px solid $base-border-color !default;
 
 ///
 /// Base background colours
 ///
 $base-background-color: #fff !default;
-$secondary-background-color: getColour(grey, light) !default;
+$secondary-background-color: getColour('grey', 'light') !default;
 
 ///
 /// Base notification colours
 ///
-$info-color: getColour(blue) !default;
-$success-color: getColour(green) !default;
-$warning-color: getColour(yellow) !default;
-$danger-color: getColour(red) !default;
+$info-color: getColour('blue') !default;
+$success-color: getColour('green') !default;
+$warning-color: getColour('yellow') !default;
+$danger-color: getColour('red') !default;
 
 ///
 /// Base spacing units

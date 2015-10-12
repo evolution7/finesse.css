@@ -7,7 +7,15 @@ ul,
 ol {
     list-style-type: none;
     margin: 0 0 $half-spacing-unit;
-    padding: 0;
+    padding: 0 0 0 $base-spacing-unit;
+}
+
+ul > li {
+    list-style-type: disc;
+}
+
+ol > li {
+    list-style-type: decimal;
 }
 
 dl {

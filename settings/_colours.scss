@@ -14,41 +14,41 @@
 ///       and supply the valid colour value.
 /// @example
 ///     $palettes: (
-///         grey: (
-///             base: #999,
-///             light: lighten(#999, 25%),
-///             dark: darken(#999, 25%)
+///         'grey': (
+///             'base': #999,
+///             'light': lighten(#999, 25%),
+///             'dark': darken(#999, 25%)
 ///         ),
-///         red: (
-///             base: #F00
+///         'red': (
+///             'base': #F00
 ///         ),
 ///     );
 ///
 $palettes: () !default;
 
 ///
-/// A handfull of default colours used to decorate our base components and objects.
+/// A handful of default colours used to decorate our base components and objects.
 /// @name   palettes-default
 /// @access private
 /// @see    palettes
 ///
 $palettes-default: (
-    grey: (
-        base: #999999,
-        light: #EEEEEE,
-        dark: #333333
+    'grey': (
+        'light': #EEEEEE,
+        'base': #999999,
+        'dark': #333333
     ),
-    blue: (
-        base: #477DCA
+    'blue': (
+        'base': #477DCA
     ),
-    green: (
-        base: #5CB85A
+    'green': (
+        'base': #5CB85A
     ),
-    yellow: (
-        base: #F0AD4E
+    'yellow': (
+        'base': #F0AD4E
     ),
-    red: (
-        base: #D9534F
+    'red': (
+        'base': #D9534F
     )
 );
 
@@ -80,8 +80,8 @@ $palettes-merged: map-merge($palettes-default, $palettes);
 /// @return     {string} colour value (HEX, RGB)
 ///
 /// @example
-///     color: getColour(grey, light);
-///     color: getColour(blue);
+///     color: getColour('grey', 'light');
+///     color: getColour('blue');
 ///
 @function getColour($palette, $tone: 'base') {
     @if map-has-key($palettes-merged, $palette) {
