@@ -17,11 +17,13 @@
     @extend .cf;
     list-style: none;
     margin: 0;
+    padding: 0;
 
     > li {
 
         &,
         > a {
+            list-style: none;
             display: inline-block;
         }
     }
@@ -88,7 +90,11 @@
 
 .nav--separator {
 
+    > li + li:before{
+        content:"\00BB\00A0";
+    }
+
     > li + li[data-separator]:before{
-        content:"\00A0" attr(data-separator) "\00A0";
+        content: attr(data-separator) "\00A0";
     }
 }

@@ -1,17 +1,3 @@
-/*------------------------------------*\
-    $LOZENGE
-\*------------------------------------*/
-/**
- * Create lozenge-like runs of text, e.g.:
- *
-   <p>This <span class=loz>here</span> is also a lozenge!</p>
- *
- * Lozenges have only their corners rounded.
- *
- * Demo: jsfiddle.net/inuitcss/N3pGm
- *
- */
-
 ///
 /// @name Lozenge
 /// @group component
@@ -24,7 +10,6 @@
 ///     <p>This <span class="loz">here</span> is a lozenge!</p>
 ///
 
-
 .loz {
     display:inline-block;
     padding: 0 0.5em;
@@ -35,4 +20,3 @@
 
     @include colour-it;
 }
-

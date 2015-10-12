@@ -12,6 +12,7 @@
 
 @mixin buttons($colour) {
     & {
+        @extend button;
         background: $colour;
 
         &:hover,
@@ -22,6 +23,11 @@
 
     &.btn--large {
         font-size: $base-font-size * 1.5;
+    }
+
+    &.btn--small {
+        padding: $half-spacing-unit;
+        font-size: 0.8em;
     }
 
     &.btn--full {
