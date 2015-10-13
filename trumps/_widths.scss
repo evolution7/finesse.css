@@ -4,9 +4,8 @@
 @include device-type;
 
 ///
-/// Our responsive classes.
+/// Our responsive grid classes.
 ///
-
 @each $key, $value in $breakpoints {
     @include media-query($key) {
        @include device-type('#{$key}-');

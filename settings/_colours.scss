@@ -1,5 +1,4 @@
 ////
-/// settings/_colours.scss
 /// @group settings
 ////
 
@@ -28,6 +27,7 @@ $palettes: () !default;
 
 ///
 /// A handful of default colours used to decorate our base components and objects.
+///
 /// @name   palettes-default
 /// @access private
 /// @see    palettes
@@ -51,8 +51,6 @@ $palettes-default: (
         'base': #D9534F
     )
 );
-
-
 
 ///
 /// A variable to house the merged arrays of $palettes and $palettes-default.

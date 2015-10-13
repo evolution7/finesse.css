@@ -1,9 +1,9 @@
 ///
-/// @name Media
-/// @group abstractions
-/// @description
-///     Place any image and text-like content side-by-side.
-///     http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+/// Place any image and text-like content side-by-side.
+/// http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+///
+/// @name media
+/// @group objects
 ///
 /// @example
 ///     <div class="media">
@@ -25,10 +25,6 @@
         float: left;
         margin-right: $base-spacing-unit;
     }
-
-    ///
-    /// Reversed image location (right instead of left).
-    ///
 
     .media__img--rev {
         float: right;
@@ -52,7 +48,6 @@
     ///
     /// Use $half-spacing-unit inside .islet
     ///
-
     .islet {
         .media {
             margin-bottom: $half-spacing-unit;

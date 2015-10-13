@@ -1,9 +1,18 @@
 ///
-/// @name Grid modifiers
-/// @group grid
-/// @description
-///     Fluid and nestable grid system. It is necessary to comment out, or otherwise
-///     remove, the whitespace from between grid items.
+/// Fluid and nestable grid system. It is necessary to comment out, or otherwise
+/// remove, the whitespace from between grid items.
+/// Modifiers are:
+///     grid--full   - removes gutters from grid
+///     grid--narrow - uses $half-spacing-unit for gutter width
+///     grid--wide   - uses 2 * $base-spacing-unit for gutter width
+///     grid--rev    - reverse layout of grid items
+///     grid--right  - aligns grid items to the right
+///     grid--center - center grid items
+///     grid--middle - vertically align columns to the middle
+///     grid--bottom - vertically align columns to the bottom
+///
+/// @name grid
+/// @group objects
 ///
 /// @example
 ///     <div class="grid">
@@ -19,36 +28,26 @@
 ///             <p>One half grid</p>
 ///         </div><!--
 ///
-///      --><div class="grid__item  one-quarter">
+///      --><div class="grid__item one-quarter">
 ///             <p>One quarter grid</p>
 ///         </div><!--
 ///
-///      --><div class="grid__item  one-quarter">
+///      --><div class="grid__item one-quarter">
 ///             <p>One quarter grid</p>
 ///         </div>
 ///     </div>
 ///
 
-
-///
-/// Grid wrapper
-///
 .grid {
     margin: 0;
     margin-left: -$base-spacing-unit;
     padding: 0;
 }
 
-    ///
-    /// Very infrequently occuring grid wrappers as children of grid wrappers.
-    ///
     .grid > .grid {
         margin-left: 0;
     }
 
-    ///
-    /// Grid item
-    ///
     .grid__item {
         display: inline-block;
         width: 100%;
@@ -57,11 +56,30 @@
         box-sizing: border-box;
     }
 
+.grid--full {
+    margin-left: 0;
 
-///
-/// Reversed grids allow you to structure your source in the opposite order to
-/// how your rendered layout will appear. Extends '.grid'.
-///
+    > .grid__item {
+        padding-left: 0;
+    }
+}
+
+.grid--narrow {
+    margin-left: -$half-spacing-unit;
+
+    > .grid__item{
+        padding-left: $half-spacing-unit;
+    }
+}
+
+.grid--wide {
+    margin-left: -($base-spacing-unit * 2);
+
+    > .grid__item{
+        padding-left: $base-spacing-unit * 2;
+    }
+}
+
 .grid--rev {
     direction: rtl;
     text-align: left;
@@ -72,23 +90,6 @@
     }
 }
 
-
-///
-/// Gutterless grids have all the properties of regular grids, minus any spacing.
-/// Extends '.grid'.
-///
-.grid--full {
-    margin-left: 0;
-
-    > .grid__item {
-        padding-left: 0;
-    }
-}
-
-
-///
-/// Align the entire grid to the right. Extends '.grid'.
-///
 .grid--right {
     text-align: right;
 
@@ -97,11 +98,6 @@
     }
 }
 
-
-///
-/// Centered grids align grid items centrally without needing to use push or pull
-/// classes. Extends '.grid'.
-///
 .grid--center {
     text-align: center;
 
@@ -110,11 +106,6 @@
     }
 }
 
-
-///
-/// Align grid cells vertically ('.grid--middle' or '.grid--bottom'). Extends
-/// '.grid'.
-///
 .grid--middle {
 
     > .grid__item {
@@ -126,29 +117,5 @@
 
     > .grid__item {
         vertical-align:bottom;
-    }
-}
-
-
-///
-/// Create grids with narrower gutters. Extends '.grid'.
-///
-.grid--narrow {
-    margin-left: -$half-spacing-unit;
-
-    > .grid__item{
-        padding-left: $half-spacing-unit;
-    }
-}
-
-
-///
-/// Create grids with wider gutters. Extends '.grid'.
-///
-.grid--wide {
-    margin-left: -($base-spacing-unit * 2);
-
-    > .grid__item{
-        padding-left: $base-spacing-unit * 2;
     }
 }

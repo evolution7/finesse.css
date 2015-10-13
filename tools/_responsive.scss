@@ -1,28 +1,15 @@
 ///
-/// @name Media query mixin.
+/// Mixin to active specific styles in one of the named breakpoints
+/// defined in $breakpoints (settings/_responsive.scss).
+///
+/// @name media-query
 /// @group tools
-/// @description
-///     It's not great practice to define solid breakpoints up-front, preferring to
-///     modify your design when it needs it, rather than assuming you'll want a
-///     change at 'mobile'. However, as inuit.css is required to take a hands off
-///     approach to design decisions, this is the closest we can get to baked-in
-///     responsiveness. It's flexible enough to allow you to set your own breakpoints
-///     but solid enough to be frameworkified.
-///
-///     We define some broad breakpoints in our variables/_breakpoints.scss file that
-///     are picked up here for use in a simple media query mixin. Our options are:
-///
-///         palm
-///         lap
-///         lap-and-up
-///         portable
-///         desk
-///         desk-wide
-///
-///     Not using a media query will, naturally, serve styles to all devices.
+/// @params {string} $media-query - Must have been declated in $breakpoints
 ///
 /// @example
-///     @include media-query(palm){ [styles here] }
+///     @include media-query(palm){
+///         [styles here]
+///     }
 ///
 
 @mixin media-query($media-query) {

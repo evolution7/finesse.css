@@ -1,24 +1,24 @@
 ///
-/// @name Pagination
+/// Basic pagination object that extends '.nav'.
+///
+/// @name pagination
 /// @group component
-/// @description
-///     Basic pagination object that extends '.nav'.
 ///
 /// @example
-///     <ol class="nav  pagination">
-///         <li class=pagination__prev>Previous</li>
-///         <li><a href=/page/1>1</a></li>
-///         <li><a href=/page/2>2</a></li>
-///         <li class=current><a href=/page/3>3</a></li>
-///         <li><a href=/page/4>4</a></li>
-///         <li><a href=/page/5>5</a></li>
-///         <li class=pagination__next><a href=/page/next>Next</a></li>
+///     <ol class="nav pagination">
+///         <li class="pagination__prev"><a href="#">Prev</a></li>
+///         <li><a href="#">1</a></li>
+///         <li><a href="#">2</a></li>
+///         <li class="current"><a href="#">3</a></li>
+///         <li><a href="#">4</a></li>
+///         <li><a href="#">5</a></li>
+///         <li class="pagination__next"><a href="#">Next</a></li>
 ///     </ol>
 ///
 
-.pagination{
+.pagination {
     margin: 1em 0;
-    text-align:center;
+    text-align: center;
 
     a {
         padding: 5px 9px;

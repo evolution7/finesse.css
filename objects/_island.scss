@@ -1,9 +1,9 @@
 ///
-/// @name Island
-/// @group abstractions
-/// @description
-///     A basic abstraction for a padded block-level element
-///     http://csswizardry.com/2011/10/the-island-object/
+/// A basic abstraction for a padded block-level element
+/// http://csswizardry.com/2011/10/the-island-object/
+///
+/// @name island
+/// @group objects
 ///
 /// @example
 ///     <div class="island [islet]">
@@ -26,10 +26,6 @@
     .islet > :last-child {
         margin-bottom: 0;
     }
-
-///
-/// Just like `.island`, only smaller.
-///
 
 .islet {
     margin-bottom: $half-spacing-unit;

@@ -26,18 +26,18 @@
 /// Globally available tools and mixins.
 ///
 @import "tools/arrow";
-@import "tools/headings";
-@import "tools/responsive";
-@import "tools/device-type";
 @import "tools/buttons";
 @import "tools/colour-it";
+@import "tools/device-type";
+@import "tools/headings";
+@import "tools/responsive";
 
 ///
 /// Generic
 /// Normalize.css and low specificty global styles.
 ///
-@import "generic/normalize";
 @import "generic/box-sizing";
+@import "generic/normalize";
 
 ///
 /// Base
@@ -60,15 +60,14 @@
 /// will rarely me be used without modification and are most commonly included
 /// via the `@extend` directive.
 ///
-@import "objects/alerts";
 @import "objects/block-list";
+@import "objects/buttons";
 @import "objects/flag";
 @import "objects/grid";
 @import "objects/island";
 @import "objects/media";
 @import "objects/nav";
 @import "objects/split";
-@import "objects/buttons";
 
 ///
 /// Components
@@ -76,13 +75,14 @@
 /// for 'quick wins'. Some components provide a modifer class `--finesse` which
 /// will provide a more opinionated design layer on top of the base component.
 ///
+@import "components/alerts";
+@import "components/card";
+@import "components/footer";
 @import "components/lozenge";
+@import "components/modal";
 @import "components/pagination";
 @import "components/prototype";
 @import "components/stats";
-@import "components/footer";
-@import "components/modal";
-@import "components/card";
 
 ///
 /// Trumps

@@ -1,14 +1,15 @@
 ///
-/// @name Buttons
+/// Creates modifier classes to manipulate the base button styles.
+/// Modifiers are:
+///     btn--large    - a bigger button...
+///     btn--full     - stretches to full with a parent
+///     btn--hollow   - transparent button with colour used as border and text colour
+///     btn--plain    - basically a hollow without the border
+///     btn--{colour} - changes button colour to one declared in $palettes
+///
+/// @name buttons
 /// @group objects
 /// @see {mixin} buttons
-/// @description
-///     Creates modifier classes to manipulate the base button styles.
-///     Options are:
-///         btn--large - a bigger button...
-///         btn--full - stretches to full with a parent
-///         btn--hollow - transparent button with colour used as border and text colour
-///         btn--plain - basically a hollow without the border
 ///
 /// @example
 ///     <button class"btn--blue btn--hollow">Button text</button>

@@ -1,11 +1,24 @@
+///
+/// Coloured notification bar that can be optionally fixed to the viewport.
+///
+/// @name alert
+/// @group components
+///
+/// @example
+///     <div class="alert">
+///         <p class="alert__text">Alert content here.</p>
+///         <div class="alert__close">&times;</div>
+///     </div>
+///
+
 .alert {
     position: relative;
     padding: $half-spacing-unit;
     font-size: 14px;
     line-height: 1.4;
     color: #ffffff;
-
 }
+
     .alert__text {
         margin: 0;
         padding-right: 40px;

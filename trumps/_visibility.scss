@@ -1,8 +1,5 @@
 ///
-/// @name Visibility
-/// @group trumps
-/// @description
-///     Simple helper classes for hiding and showing content based on media queries.
+/// Simple helper classes for hiding and showing content based on media queries.
 ///
 
 @each $key, $value in $breakpoints {

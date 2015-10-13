@@ -1,11 +1,12 @@
 ///
+/// Mixin that will take the parent selector and create modifier classes
+/// for each colour in your application's palette. In this version
+/// of the mixin the modifier will only change the background colour but if
+/// we can enhance it to pass in other properties this could be very handy.
+///
 /// @name colour-it
 /// @group tools
-/// @description
-///     Mixin that will take the parent selector and create modifier classes
-///     for each colour in your application's palette. In this version
-///     of the mixin the modifier will only change the background colour but if
-///     we can enhance it to pass in other properties this could be very handy.
+/// @return {css} colour modifier classes nested under the object
 ///
 /// @example
 ///     .object {
