@@ -21,8 +21,9 @@
 .prototype {
     line-height: $base-spacing-unit;
     text-align: center;
-    background-color: #999;
-    color: #fff;
+    background-color: #ccc;
+    color: #333;
+    font-size: 12px;
 
     a {
         color: #fff;
