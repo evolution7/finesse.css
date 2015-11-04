@@ -1,0 +1,75 @@
+///
+/// Creates modified versions of the button object classes using the applications
+/// colour palette. We only really need to modify the button modifiers that
+/// actually use the colours but putting them all here to avoid confusion.
+///
+/// @name buttons
+/// @group grid
+///
+/// @example
+///     <button class"btn--blue btn--hollow">Button text</button>
+///
+
+///
+/// The function used to fetch valid colour values from the $palletes and $palettes-default data maps. Function
+/// location is currently in `settings/_colours.scss` as other settings files require this function, it throws
+/// a error due to late declaration.
+///
+/// @name       buttons
+/// @group      tools
+/// @access     private
+/// @param      {string} $colour - A reference to an available palette (colour) in $palletes or $palettes-default.
+/// @return     {css} button modifier classes nested under the $color modifier
+///
+/// @example
+///     <button class"btn--blue btn--hollow">Button text</button>
+///
+
+@mixin buttons($colour) {
+    & {
+        @extend button;
+        background: $colour;
+
+        &:hover,
+        &:focus {
+            background-color: darken($colour, 10%);
+        }
+    }
+
+    &.btn--large {
+        font-size: $base-font-size * 1.5;
+    }
+
+    &.btn--small {
+        padding: $half-spacing-unit;
+        font-size: 0.8em;
+    }
+
+    &.btn--full {
+        display: block;
+        width: 100%;
+    }
+
+    &.btn--hollow {
+        color: $colour;
+        background: transparent;
+        border: 1px solid currentColor;
+
+        &:hover,
+        &:focus {
+            background-color: $colour;
+            color: #fff;
+        }
+    }
+
+    &.btn--plain {
+        background: transparent;
+        color: $colour;
+
+        &:hover,
+        &:focus {
+            background: $colour;
+            color: #fff;
+        }
+    }
+}

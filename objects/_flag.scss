@@ -1,9 +1,9 @@
 ///
-/// @name Flag
-/// @group abstractions
-/// @description
-///     A version of the media object that vertically aligns the text
-///     with modifier classes to change the alignment.
+/// A version of the media object that vertically aligns the text
+/// with modifier classes to change the alignment.
+///
+/// @name flag
+/// @group objects
 ///
 /// @example
 ///     <div class="flag [flag--top flag--bottom flag--rev]">
@@ -59,7 +59,6 @@
     ///
     /// Use $half-spacing-unit inside .islet
     ///
-
     .islet {
         .flag {
             margin-bottom: $half-spacing-unit;

@@ -1,17 +1,93 @@
+///
+/// Basic 2 part footer with columned navigation and copyright strip.
+/// Both parts can be used individually.
+///
+/// @name footer-finesse
+/// @group components
+///
+/// @example
+///     <div class="footer-finesse">
+///         <div class="footer__nav">
+///             <div class="grid">
+///                 <div class="grid__item one-quarter">
+///                     <h4>Nav title</h4>
+///                     <ul>
+///                         <li><a href="#">Nav item</a></li>
+///                         <li><a href="#">Nav item</a></li>
+///                     </ul>
+///                 </div><!--
+///              --><div class="grid__item one-quarter">
+///                     <h4>Nav title</h4>
+///                     <ul>
+///                         <li><a href="#">Nav item</a></li>
+///                         <li><a href="#">Nav item</a></li>
+///                     </ul>
+///                 </div><!--
+///              --><div class="grid__item one-quarter">
+///                     <h4>Nav title</h4>
+///                     <ul>
+///                         <li><a href="#">Nav item</a></li>
+///                         <li><a href="#">Nav item</a></li>
+///                         <li><a href="#">Nav item</a></li>
+///                         <li><a href="#">Nav item</a></li>
+///                     </ul>
+///                 </div>
+///             </div>
+///         </div>
+///         <div class="footer__strip">
+///             <ul class="float--left">
+///                 <li data-separator="|"><a href="#">Nav item</a></li>
+///                 <li data-separator="|"><a href="#">Nav item</a></li>
+///             </ul>
+///             <p class="float--right">&copy; <span class="hidden--portable">Copyright</span> 2015</p>
+///         </div>
+///     </div>
+///
+
 .footer-finesse {
     @extend .cf;
-    padding: $half-spacing-unit 0;
     background: $secondary-background-color;
-
-    @include media-query(desk) {
-        padding: $base-spacing-unit 0;
-    }
+    font-size: 0.85em;
 }
 
-    .footer__navigation {
-        margin-bottom: 1.5em;
+    .footer__nav {
+        @extend .cf;
+        margin: 0;
+        padding: $base-spacing-unit $base-spacing-unit $half-spacing-unit;
+
+        @include media-query(portable) {
+            display: none;
+        }
+
+        ul {
+            @extend .nav;
+            @extend .nav--stacked;
+        }
 
         li {
             margin-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer__strip {
+        @extend .cf;
+        margin: 0;
+        padding: $base-spacing-unit;
+
+        @include media-query(portable) {
+            padding: $half-spacing-unit;
+        }
+
+        ul {
+            @extend .nav;
+            @extend .nav--separator;
+        }
+
+        p {
+            margin: 0;
         }
     }

@@ -1,13 +1,14 @@
 ///
-/// @name Widths
-/// @group grid
-/// @description
-///     Sizes in human readable format. These are used in conjunction with other
-///     objects and abstractions found in inuit.css, most commonly the grid system
-///     and faux flexbox.
+/// Grid sizes in human readable format. These are used in conjunction with other
+/// objects and abstractions found the framework, most commonly the grid system.
+/// The mixin is privately accessed in trumps/_widths.scss to activate the classes
+/// within the required media queries.
 ///
-///     We have a mixin to generate our widths and their breakpoint-specific
-///     variations.
+/// @name device-type
+/// @group tools
+/// @access private
+/// @param {string} $namespace - label of breakpoint
+/// @return {css} - human readable namespaced grid classes
 ///
 
 @mixin device-type($namespace: "") {
@@ -16,12 +17,10 @@
     ///
     .#{$namespace}one-whole         { width:100%; }
 
-
     ///
     /// Halves
     ///
     .#{$namespace}one-half          { width:50%; }
-
 
     ///
     /// Thirds
@@ -29,14 +28,12 @@
     .#{$namespace}one-third         { width:33.333%; }
     .#{$namespace}two-thirds        { width:66.666%; }
 
-
     ///
     /// Quarters
     ///
     .#{$namespace}one-quarter       { width:25%; }
     .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
     .#{$namespace}three-quarters    { width:75%; }
-
 
     ///
     /// Fifths
@@ -46,7 +43,6 @@
     .#{$namespace}three-fifths      { width:60%; }
     .#{$namespace}four-fifths       { width:80%; }
 
-
     ///
     /// Sixths
     ///
@@ -55,7 +51,6 @@
     .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
     .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }
     .#{$namespace}five-sixths       { width:83.333%; }
-
 
     ///
     /// Eighths
@@ -67,7 +62,6 @@
     .#{$namespace}five-eighths      { width:62.5%; }
     .#{$namespace}six-eighths       { @extend .#{$namespace}three-quarters; }
     .#{$namespace}seven-eighths     { width:87.5%; }
-
 
     ///
     /// Tenths
@@ -81,7 +75,6 @@
     .#{$namespace}seven-tenths      { width:70%; }
     .#{$namespace}eight-tenths      { @extend .#{$namespace}four-fifths; }
     .#{$namespace}nine-tenths       { width:90%; }
-
 
     ///
     /// Twelfths

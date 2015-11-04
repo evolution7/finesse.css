@@ -1,19 +1,4 @@
 ///
-/// Finesse
-///
-/// Finesse is a CSS toolkit employed by Evolution 7 which utilises core parts
-/// of inuit.css as well as learnings from bourbon.io among other css libraries.
-///
-/// All credit goes to Harry Roberts (http://csswizardry.com/) for the modified
-/// version of inuit.css v6 (https://github.com/csswizardry/inuit.css/)
-/// as a base for Finesse together with an adaptation of csswizardry-grids
-/// (http://csswizardry.com/csswizardry-grids/) for the grid system.
-///
-/// Also to Bourbon.io (http://bourbon.io/) for a slightly modified version of
-/// their Bitters scaffold styles (http://bitters.bourbon.io/).
-///
-
-///
 /// Settings
 /// Global variable files.
 ///
@@ -26,16 +11,18 @@
 /// Globally available tools and mixins.
 ///
 @import "tools/arrow";
+@import "tools/buttons";
+@import "tools/colour-it";
+@import "tools/device-type";
 @import "tools/headings";
 @import "tools/responsive";
-@import "tools/device-type";
 
 ///
 /// Generic
 /// Normalize.css and low specificty global styles.
 ///
-@import "generic/normalize";
 @import "generic/box-sizing";
+@import "generic/normalize";
 
 ///
 /// Base
@@ -59,9 +46,11 @@
 /// via the `@extend` directive.
 ///
 @import "objects/block-list";
+@import "objects/buttons";
 @import "objects/flag";
 @import "objects/grid";
 @import "objects/island";
+@import "objects/lozenge";
 @import "objects/media";
 @import "objects/nav";
 @import "objects/split";
@@ -72,13 +61,13 @@
 /// for 'quick wins'. Some components provide a modifer class `--finesse` which
 /// will provide a more opinionated design layer on top of the base component.
 ///
-@import "components/lozenge";
+@import "components/alerts";
+@import "components/card";
+@import "components/footer";
+@import "components/modal";
 @import "components/pagination";
 @import "components/prototype";
 @import "components/stats";
-@import "components/header";
-@import "components/footer";
-@import "components/modal";
 
 ///
 /// Trumps

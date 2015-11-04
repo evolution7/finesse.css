@@ -1,4 +1,8 @@
-/// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+///
+/// Wildcard selector to apply box-sizing: border-box using the implementation
+/// from: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+///
+
 html {
     box-sizing: border-box;
 }

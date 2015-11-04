@@ -1,8 +1,8 @@
 ///
-/// @name Block List
-/// @group abstractions
-/// @description
-///     A padded list that can contain a full-width link or any inline elements.
+/// A padded list that can contain a full-width link or any inline elements.
+///
+/// @name block-list
+/// @group objects
 ///
 /// @example
 ///     <ul class="block-list">
@@ -14,7 +14,7 @@
 ///
 
 .block-list {
-    margin-left: 0;
+    padding-left: 0;
     border-top: $base-border;
     list-style: none;
 

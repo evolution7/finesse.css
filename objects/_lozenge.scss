@@ -1,0 +1,22 @@
+///
+/// Creates a small tag like element for showing state/context. Modifier
+/// classes for each colour in the application are automatically created
+/// however by default the text colour will be white.
+///
+/// @name lozenge
+/// @group object
+///
+/// @example
+///     <p>This <span class="loz">here</span> is a lozenge!</p>
+///
+
+.loz {
+    display:inline-block;
+    padding: 0 0.5em;
+    text-align: center;
+    background-color: $base-font-color;
+    color: #fff;
+    border-radius: $base-border-radius;
+
+    @include colour-it;
+}

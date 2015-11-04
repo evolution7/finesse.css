@@ -1,4 +1,12 @@
+///
+/// Base font styles that are a little prettier that what normalize.css gives.
+/// You would have had to override these styles anyway so why not have a crack
+/// at giving you what you need here. Any new design patterns we see in terms of
+/// typography should be reflected here.
+///
+
 body {
+    background: #fff;
     color: $base-font-color;
     font-family: $base-font-family;
     font-feature-settings: "kern", "liga", "pnum";
@@ -8,21 +16,7 @@ body {
 
 @include headings(1, 6) {
     font-family: $heading-font-family;
-    font-size: $base-font-size;
-    line-height: $heading-line-height;
     margin: 0 0 $half-spacing-unit;
-}
-
-h1 {
-    font-size: 1.75em;
-}
-
-h2 {
-    font-size: 1.5em;
-}
-
-h3 {
-    font-size: 1.25em;
 }
 
 p {

@@ -1,5 +1,4 @@
 ////
-/// settings/_colours.scss
 /// @group settings
 ////
 
@@ -14,42 +13,51 @@
 ///       and supply the valid colour value.
 /// @example
 ///     $palettes: (
-///         grey: (
-///             base: #999,
-///             light: lighten(#999, 25%),
-///             dark: darken(#999, 25%)
+///         'grey': (
+///             'base': #999,
+///             'light': lighten(#999, 25%),
+///             'dark': darken(#999, 25%)
 ///         ),
-///         red: (
-///             base: #F00
+///         'red': (
+///             'base': #F00
 ///         ),
 ///     );
 ///
 $palettes: () !default;
 
 ///
-/// A handfull of default colours used to decorate our base components and objects.
+/// A handful of default colours used to decorate our base components and objects.
+///
 /// @name   palettes-default
 /// @access private
 /// @see    palettes
 ///
 $palettes-default: (
-    grey: (
-        base: #999,
-        light: #EEE,
-        dark: #333
+    'grey': (
+        'light': #EEEEEE,
+        'base': #999999,
+        'dark': #333333
     ),
-    blue: (
-        base: #477dca
+    'blue': (
+        'base': #477DCA
     ),
+    'green': (
+        'base': #5CB85A
+    ),
+    'yellow': (
+        'base': #F0AD4E
+    ),
+    'red': (
+        'base': #D9534F
+    )
 );
-
-
 
 ///
 /// A variable to house the merged arrays of $palettes and $palettes-default.
 /// Why two arrays you ask? It allows the default colours provided by finesse to be *optionally*
 /// overwritten. Using one array would result in having to respecify the defaults if any new
 /// colours were to be added for the application.
+///
 /// @name       palettes-merged
 /// @access     private
 /// @require    {variable} palettes-default
@@ -62,7 +70,7 @@ $palettes-merged: map-merge($palettes-default, $palettes);
 /// location is currently in `settings/_colours.scss` as other settings files require this function, it throws
 /// a error due to late declaration.
 ///
-/// @name       palette
+/// @name       getColour
 /// @group      tools
 /// @param      {string} $palette - A reference to an available palette (colour) in $palletes or $palettes-default.
 /// @param      {string} $tone [base] - A reference to an available tone within a selected palette.
@@ -70,10 +78,10 @@ $palettes-merged: map-merge($palettes-default, $palettes);
 /// @return     {string} colour value (HEX, RGB)
 ///
 /// @example
-///     color: palette(grey, light);
-///     color: palette(blue);
+///     color: getColour('grey', 'light');
+///     color: getColour('blue');
 ///
-@function palette($palette, $tone: 'base') {
+@function getColour($palette, $tone: 'base') {
     @if map-has-key($palettes-merged, $palette) {
         @if map-has-key(map-get($palettes-merged, $palette), $tone) {
             @return map-get(map-get($palettes-merged, $palette), $tone);
@@ -84,4 +92,15 @@ $palettes-merged: map-merge($palettes-default, $palettes);
     } @else {
         @warn "Palette '#{$palette}' does not exist";
     }
+}
+
+///
+/// An alias of getColour with the american spelling because we all make mistakes...
+///
+/// @name       getColor
+/// @group      tools
+/// @see        getColour
+///
+@function getColor($palette, $tone: 'base') {
+    @return getColour($palette, $tone);
 }

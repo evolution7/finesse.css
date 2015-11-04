@@ -1,8 +1,21 @@
+///
+/// Not much to see here, just a nice starting point for lists using our
+/// site-wide spacing values.
+///
+
 ul,
 ol {
     list-style-type: none;
     margin: 0 0 $half-spacing-unit;
-    padding: 0;
+    padding: 0 0 0 $base-spacing-unit;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
 }
 
 dl {

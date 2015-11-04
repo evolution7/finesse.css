@@ -1,15 +1,22 @@
 ///
-/// @name Nav
-/// @group abstractions
-/// @description
-///     Basic navigation abstraction with minor layout modifiers.
+/// Basic navigation abstraction with minor layout modifiers.
+/// Modifiers are:
+///     nav--stacked   - throws the list into vertical mode
+///     nav--banner    - centres the list
+///     nav--block     - gives nav links a big, blocky hit area
+///     nav--fit       - forces a nav to occupy 100% width of its parent
+///     nav--separator - breadcrumbs-like separators that can be customised
+///                      by using the data-separator attribute on the <li>
+///
+/// @name nav
+/// @group objects
 ///
 /// @example
-///     <ul class="nav [nav--stacked nav--banner nav--block nav--fit nav--separator]">
+///     <ul class="nav nav--separator">
 ///         <li data-separator="|"><a href="#">Home</a></li>
-///         <li><a href="#">About</a></li>
-///         <li><a href="#">Portfolio</a></li>
-///         <li><a href="#">Contact</a></li>
+///         <li data-separator="|"><a href="#">About</a></li>
+///         <li data-separator="|"><a href="#">Portfolio</a></li>
+///         <li data-separator="|"><a href="#">Contact</a></li>
 ///     </ul>
 ///
 
@@ -17,6 +24,7 @@
     @extend .cf;
     list-style: none;
     margin: 0;
+    padding: 0;
 
     > li {
 
@@ -26,10 +34,6 @@
         }
     }
 }
-
-///
-/// .nav--stacked throws the list into vertical mode.
-///
 
 .nav--stacked {
 
@@ -42,17 +46,9 @@
     }
 }
 
-///
-/// .nav--banner centres the list.
-///
-
 .nav--banner {
     text-align: center;
 }
-
-///
-/// .nav--block gives nav links a big, blocky hit area.
-///
 
 .nav--block {
     line-height: 1;
@@ -64,10 +60,6 @@
         }
     }
 }
-
-///
-/// .nav--fit forces a nav to occupy 100% of the available width of its parent.
-///
 
 .nav--fit {
     display: table;
@@ -82,13 +74,13 @@
     }
 }
 
-///
-/// .nav--keywords transforms the nav to a comma-delimited list.
-///
-
 .nav--separator {
 
+    > li + li:before{
+        content:"\00BB\00A0";
+    }
+
     > li + li[data-separator]:before{
-        content:"\00A0" attr(data-separator) "\00A0";
+        content: attr(data-separator) "\00A0";
     }
 }

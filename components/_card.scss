@@ -1,0 +1,39 @@
+///
+/// Very simple card component. Any consistently used modifiers
+/// should be added here.
+///
+/// @name card
+/// @group components
+///
+/// @example
+///     <div class="card">
+///         <div class="card__image">
+///             <img src="https://placehold.it/500x300" alt="">
+///         </div>
+///         <div class="card__body">
+///             <h3 class="card__title">Card title</h3>
+///             <p>Card content goes here.</p>
+///             <button>Button</button>
+///         </div>
+///     </div>
+///
+
+.card {
+    margin-bottom: $base-spacing-unit;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    overflow: hidden;
+}
+    .card__image {
+        img {
+            display: block;
+        }
+    }
+
+    .card__body {
+        padding: $base-spacing-unit;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
