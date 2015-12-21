@@ -6,12 +6,16 @@ Finesse.css should be included in your application via 2 seperate includes. You 
 
     // Main.scss
     @import "path/to/finesse/tools";
+    @import "yourColourOverrides";
+    @import "path/to/finesse/colours";
     @import "yourVariableOverrides";
     @import "path/to/finesse/finesse";
-    
+
     // Your CSS goes here...
 
 The reason for this is that your variables may require use of the helper functions provided in finesse.css (ie. getColor('customColor')) as well as need to be included before the remainder of the toolkit to override the defaults provided.
+
+Any suggestions on how to better manage the inclusion of finesse.css please let us know.
 
 ## Examples
 A visual example of the toolkit's default styles can be found [here](https://app.frontify.com/d/JiVE4P75dUCR/finesse-css-1444405267).
