@@ -5,7 +5,7 @@
 ///     btn--full     - stretches to full with a parent
 ///     btn--hollow   - transparent button with colour used as border and text colour
 ///     btn--plain    - basically a hollow without the border
-///     btn--{colour} - changes button colour to one declared in $palettes
+///     btn--{colour} - changes button colour to one declared in $palette
 ///
 /// @name buttons
 /// @group objects
@@ -20,7 +20,7 @@
     @include buttons($action-color);
 }
 
-@each $palette, $tones in $palettes-merged {
+@each $palette, $tones in $palette-merged {
     @each $key, $value in $tones {
         @if $key == 'base' {
             .btn--#{$palette} {

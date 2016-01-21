@@ -1,25 +1,25 @@
 ///
 /// Loop to create helper classes for quick background and text changes
-/// using the colours from $palettes-merged.
+/// using the colours from $palette-merged.
 ///
 
-@each $palette, $tones in $palettes-merged {
+@each $colour, $tones in $palette-merged {
     @each $key, $value in $tones {
         @if $key == 'base' {
-            .bg--#{$palette} {
+            .bg--#{$colour} {
                 background: $value;
             }
 
-            .text--#{$palette} {
+            .text--#{$colour} {
                 color: $value;
             }
         }
 
-        .bg--#{$palette}-#{$key} {
+        .bg--#{$colour}-#{$key} {
             background: $value;
         }
 
-        .text--#{$palette}-#{$key} {
+        .text--#{$colour}-#{$key} {
             color: $value;
         }
     }

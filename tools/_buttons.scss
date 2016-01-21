@@ -11,14 +11,14 @@
 ///
 
 ///
-/// The function used to fetch valid colour values from the $palletes and $palettes-default data maps. Function
+/// The function used to fetch valid colour values from the $palletes and $palette-default data maps. Function
 /// location is currently in `settings/_colours.scss` as other settings files require this function, it throws
 /// a error due to late declaration.
 ///
 /// @name       buttons
 /// @group      tools
 /// @access     private
-/// @param      {string} $colour - A reference to an available palette (colour) in $palletes or $palettes-default.
+/// @param      {string} $colour - A reference to an available palette (colour) in $palletes or $palette-default.
 /// @return     {css} button modifier classes nested under the $color modifier
 ///
 /// @example

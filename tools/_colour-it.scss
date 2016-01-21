@@ -15,15 +15,15 @@
 ///
 
 @mixin colour-it() {
-    @each $palette, $tones in $palettes-merged {
+    @each $colour, $tones in $palette-merged {
         @each $key, $value in $tones {
             @if $key == 'base' {
-                &--#{$palette} {
+                &--#{$colour} {
                     background-color: $value;
                 }
             }
 
-            &--#{$palette}-#{$key} {
+            &--#{$colour}-#{$key} {
                 background-color: $value;
             }
         }
