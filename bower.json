@@ -1,10 +1,10 @@
 {
-  "name": "finesse",
-  "version": "0.0.0",
+  "name": "finesse.css",
+  "version": "1.0.0-beta.3",
   "authors": [
     "Evolution 7"
   ],
-  "description": "CSS framework used by Evolution 7",
+  "description": "CSS toolkit based on Inuit.css",
   "main": "_finesse.scss",
   "license": "MIT",
   "homepage": "http://www.evolution7.com.au",
