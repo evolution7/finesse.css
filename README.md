@@ -2,12 +2,12 @@
 Finesse.css is a CSS toolkit which takes learnings from a range of other CSS frameworks and UI kits.
 
 ## Usage
-Finesse.css should be included in your application via 2 seperate includes. You own variables (preferably in their own file) need to be included between the finesse tools and the remainder of the toolkit.
+Finesse.css should be included in your application via 2 separate includes. You own variables (preferably in their own file) need to be included between the finesse tools and the remainder of the toolkit.
 
     // Main.scss
     @import "path/to/finesse/tools";
-    @import "yourColourOverrides";
-    @import "path/to/finesse/colours";
+    @import "yourPaletteOverrides";
+    @import "path/to/finesse/palette";
     @import "yourVariableOverrides";
     @import "path/to/finesse/finesse";
 

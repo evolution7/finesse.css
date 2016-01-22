@@ -4,15 +4,15 @@
 
 ///
 /// An initialisation of the array where application specific colours should be declared. Can be used
-/// also to override default colours declared in $palettes-default.
+/// also to override default colours declared in $palette-default.
 ///
-/// @name palettes
+/// @name palette
 /// @type Map
 /// @prop {Map} pallette - A named colour palette to house different tones of said palette
 /// @prop {String} pallette.tone [Colour] - A key-value pair to describe the tone of the parent palette
 ///       and supply the valid colour value.
 /// @example
-///     $palettes: (
+///     $palette: (
 ///         'grey': (
 ///             'base': #999,
 ///             'light': lighten(#999, 25%),
@@ -23,16 +23,16 @@
 ///         ),
 ///     );
 ///
-$palettes: () !default;
+$palette: () !default;
 
 ///
 /// A handful of default colours used to decorate our base components and objects.
 ///
-/// @name   palettes-default
+/// @name   palette-default
 /// @access private
-/// @see    palettes
+/// @see    palette
 ///
-$palettes-default: (
+$palette-default: (
     'grey': (
         'light': #EEEEEE,
         'base': #999999,
@@ -53,28 +53,28 @@ $palettes-default: (
 );
 
 ///
-/// A variable to house the merged arrays of $palettes and $palettes-default.
+/// A variable to house the merged arrays of $palette and $palette-default.
 /// Why two arrays you ask? It allows the default colours provided by finesse to be *optionally*
 /// overwritten. Using one array would result in having to respecify the defaults if any new
 /// colours were to be added for the application.
 ///
-/// @name       palettes-merged
+/// @name       palette-merged
 /// @access     private
-/// @require    {variable} palettes-default
-/// @require    {variable} palettes
+/// @require    {variable} palette-default
+/// @require    {variable} palette
 ///
-$palettes-merged: map-merge($palettes-default, $palettes);
+$palette-merged: map-merge($palette-default, $palette);
 
 ///
-/// The function used to fetch valid colour values from the $palletes and $palettes-default data maps. Function
+/// The function used to fetch valid colour values from the $palletes and $palette-default data maps. Function
 /// location is currently in `settings/_colours.scss` as other settings files require this function, it throws
 /// a error due to late declaration.
 ///
 /// @name       getColour
 /// @group      tools
-/// @param      {string} $palette - A reference to an available palette (colour) in $palletes or $palettes-default.
+/// @param      {string} $palette - A reference to an available palette (colour) in $palletes or $palette-default.
 /// @param      {string} $tone [base] - A reference to an available tone within a selected palette.
-/// @require    {variable} palettes-merged
+/// @require    {variable} palette-merged
 /// @return     {string} colour value (HEX, RGB)
 ///
 /// @example
@@ -82,9 +82,9 @@ $palettes-merged: map-merge($palettes-default, $palettes);
 ///     color: getColour('blue');
 ///
 @function getColour($palette, $tone: 'base') {
-    @if map-has-key($palettes-merged, $palette) {
-        @if map-has-key(map-get($palettes-merged, $palette), $tone) {
-            @return map-get(map-get($palettes-merged, $palette), $tone);
+    @if map-has-key($palette-merged, $palette) {
+        @if map-has-key(map-get($palette-merged, $palette), $tone) {
+            @return map-get(map-get($palette-merged, $palette), $tone);
         } @else {
             @warn "Palette '#{$palette}' does not contain '#{$tone}' to";
         }
