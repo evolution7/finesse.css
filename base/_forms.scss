@@ -119,4 +119,8 @@ select {
     background-position: right 10px top 50%;
     padding-right: $base-spacing-unit;
     line-height: normal;
+
+    &::-ms-expand {
+        display: none;
+    }
 }
