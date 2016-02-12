@@ -1,5 +1,5 @@
 ///
-/// Creates modifier classes to manipulate the base button styles.
+/// Creates default styling and modifier classes to manipulate the base button styles.
 /// Modifiers are:
 ///     btn--large    - a bigger button...
 ///     btn--full     - stretches to full with a parent
@@ -12,11 +12,45 @@
 /// @see {mixin} buttons
 ///
 /// @example
-///     <button class"btn--blue btn--hollow">Button text</button>
+///     <button class"btn btn--blue btn--hollow">Button text</button>
 ///
 
 /// Creating default modifers using $action-color
 .btn {
+    appearance: none;
+    background-color: $action-color;
+    border: 0;
+    border-radius: $base-border-radius;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    line-height: 1;
+    padding: $half-spacing-unit $base-spacing-unit;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        background-color: darken($action-color, 10%);
+        color: #fff;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: $action-color;
+        }
+    }
+
     @include buttons($action-color);
 }
 
@@ -31,5 +65,40 @@
         .btn--#{$palette}-#{$key} {
             @include buttons($value);
         }
+    }
+}
+
+/// Modifiers without colour requirements
+
+.btn--large {
+    font-size: $base-font-size * 1.5;
+}
+
+.btn--small {
+    padding: $half-spacing-unit;
+    font-size: 0.8em;
+}
+
+.btn--full {
+    display: block;
+    width: 100%;
+}
+
+.btn--hollow {
+    background: transparent;
+    border: 1px solid currentColor;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+}
+
+.btn--plain {
+    background: transparent;
+
+    &:hover,
+    &:focus {
+        color: #fff;
     }
 }
