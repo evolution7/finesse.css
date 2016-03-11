@@ -6,6 +6,8 @@
 /// not a hindrance.
 ///
 
+@if $disable-forms == false {
+
 fieldset {
     background-color: $secondary-background-color;
     border: $base-border;
@@ -123,4 +125,6 @@ select {
     &::-ms-expand {
         display: none;
     }
+}
+
 }

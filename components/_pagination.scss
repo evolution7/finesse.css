@@ -16,6 +16,8 @@
 ///     </ol>
 ///
 
+@if $disable-pagination == false {
+
 .pagination {
     margin: 1em 0;
     text-align: center;
@@ -39,3 +41,5 @@
     .pagination__last a:after {
         content:"\00A0" "\00BB";
     }
+
+}

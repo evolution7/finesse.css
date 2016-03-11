@@ -44,6 +44,8 @@
 ///     </div>
 ///
 
+@if $disable-footer == false {
+
 .footer-finesse {
     @extend .cf;
     background: $secondary-background-color;
@@ -91,3 +93,5 @@
             margin: 0;
         }
     }
+
+}

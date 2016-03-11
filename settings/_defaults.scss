@@ -49,3 +49,14 @@ $danger-color: getColour('red') !default;
 ///
 $base-spacing-unit: $base-line-height * 1em !default;
 $half-spacing-unit: $base-spacing-unit / 2 !default;
+
+///
+/// Disable some 'opinionation'
+///
+$disable-alert: false !default;
+$disable-buttons: false !default;
+$disable-card: false !default;
+$disable-footer: false !default;
+$disable-forms: false !default;
+$disable-modal: false !default;
+$disable-pagination: false !default;

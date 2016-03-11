@@ -11,6 +11,8 @@
 ///     </div>
 ///
 
+@if $disable-alert == false {
+
 .alert {
     position: relative;
     padding: $half-spacing-unit;
@@ -55,4 +57,6 @@
     top: 0;
     width: 100%;
     z-index: 1;
+}
+
 }
