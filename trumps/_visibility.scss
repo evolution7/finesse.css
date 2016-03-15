@@ -5,7 +5,7 @@
 @each $key, $value in $breakpoints {
     .hidden--#{$key} {
         @include media-query(#{$key}) {
-            display: none;
+            display: none !important;
         }
     }
 
@@ -13,12 +13,12 @@
         display: none;
 
         @include media-query(#{$key}) {
-            display: block;
+            display: block !important;
         }
 
         &.grid__item {
             @include media-query(#{$key}) {
-                display: inline-block;
+                display: inline-block !important;
             }
         }
     }
